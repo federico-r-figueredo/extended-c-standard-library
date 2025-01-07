@@ -5,7 +5,8 @@
 #include "x-assert-examples.h"
 
 int main(int argument_count, char** argument_values) {
-    test_checking_single_expression();
-    test_checking_logical_expression();
+    test_ensuring_size_of_data_type();
+    test_checking_structure_alignment();
+    
     return EXIT_SUCCESS;
 }

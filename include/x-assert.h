@@ -44,4 +44,27 @@ void __assert(bool expression, const char *expression_str, const char *file, int
     #define assert(expression) __assert((expression), #expression, __FILE__, __LINE__)
 #endif
 
+#if __STDC_VERSION__ >= 201112L
+    /**
+     * @brief Powerful macro introduced in C11 standard that allows you to perform 
+     * compile-time assertions. This means that you can check certain conditions at
+     * compile-time rather than at execution-time, catching potential errors early in 
+     * the development process.
+     * 
+     * @param expression This is a constant boolean expression that the compiler evaulates 
+     * at compile-time. If this expression evaluates to false (i.e. `0`), the compilation
+     * fails. Otherwise, if the expression evaluates to true (i.e `1`), the compilation
+     * is allowed to proceed.
+     * 
+     * @param message This is a string literal that provides a description of the error
+     * when the assertion fails. This message is displayed during compilation if the
+     * assertion fails.
+     * 
+     * @returns This macro does not return a value. Instead, it either allows compilation
+     * to proceed (if the assertion evaluates to true) or a compile-time error is raised
+     * (if the assertion evaluates to false).
+     */
+    #define static_assert(expression, message) _Static_assert(expression, message)
+#endif
+
 #endif // ASSERT_H
