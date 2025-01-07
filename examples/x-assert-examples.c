@@ -5,7 +5,7 @@
 #include "x-assert-examples.h"
 
 /********************************************************************
- *                 Assert types, macros & functions                 *
+ *                x-assert types, macros & functions                *
  ********************************************************************/
 
 /**

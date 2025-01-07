@@ -2,7 +2,7 @@
 #define X_ASSERT_EXAMPLES_H
 
 /********************************************************************
- *                 Assert types, macros & functions                 *
+ *                x-assert types, macros & functions                *
  ********************************************************************/
 
 /**
